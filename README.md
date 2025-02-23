@@ -52,11 +52,24 @@ python stressipy.py --test-type clienti_distribuiti --clients 20 --duration 60 h
 ```
 Questo comando manterrà 20 client concorrenti inviando richieste in parallelo per 60 secondi.
 
+#### 4. Testare più domini contemporaneamente per i vari test
+StressiPy consente di testare più URL contemporaneamente. Basta elencare gli URL separati da uno spazio.
+
 ### Generazione del report
 Alla fine del test, viene generato un file HTML con i risultati, che si aprirà automaticamente nel browser. Puoi specificare un nome personalizzato per il file di output con l'opzione `--output-file`:
 ```bash
 python stressipy.py --test-type clients_per_second --clients 10 --duration 30 --output-file my_report.html https://example.com
 ```
+### Dati del report
+Il report generato fornisce una panoramica dettagliata delle prestazioni dei siti testati, includendo:
+	•	Tempo medio di risposta (ms) – Il tempo medio impiegato per ottenere una risposta dal server.
+	•	Tempo minimo e massimo di risposta (ms) – Il valore più basso e più alto registrato durante il test.
+	•	Numero totale di richieste – Quante richieste sono state inviate all’URL.
+	•	Numero di richieste fallite – Quante richieste non hanno ricevuto una risposta valida.
+	•	Tasso di errore (%) – Percentuale di richieste che hanno fallito rispetto al totale.
+	•	Distribuzione dei codici di stato HTTP – Il numero di risposte ricevute suddivise per codice di stato (200, 404, 500, ecc.).
+
+Questi dati permettono di analizzare le prestazioni del server e identificare eventuali colli di bottiglia o problemi di stabilità.
 
 ## Contributi
 Se vuoi contribuire al progetto, sentiti libero di aprire una **Issue** o un **Pull Request**!
