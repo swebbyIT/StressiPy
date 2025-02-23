@@ -4,9 +4,9 @@ StressiPy è uno strumento open-source per eseguire test di carico su URL specif
 
 ## Funzionalità
 - Test di carico con tre modalità:
-  - `clients_per_second`: Simula un numero fisso di richieste al secondo.
-  - `clients_per_test`: Distribuisce un numero totale di richieste su un periodo definito.
-  - `maintain_client_load`: Mantiene un numero fisso di client concorrenti per un periodo definito.
+  - `clienti_per_secondo`: Simula un numero fisso di richieste al secondo.
+  - `clienti_per_test`: Distribuisce un numero totale di richieste su un periodo definito.
+  - `clienti_distribuiti`: Mantiene un numero fisso di client concorrenti per un periodo definito.
 - Report HTML con statistiche dettagliate, inclusi:
   - Tempi di risposta (medio, minimo, massimo)
   - Percentuale di errori
@@ -19,8 +19,8 @@ Prima di iniziare, assicurati di avere **Python 3.7+** installato sul tuo sistem
 
 ### 1. Clona il repository
 ```bash
-git clone https://github.com/tuo-username/LoadTestPy.git
-cd LoadTestPy
+git clone https://github.com/tuo-username/StressiPy.git
+cd stressipy
 ```
 
 ### 2. Installa le dipendenze
